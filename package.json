@@ -31,6 +31,7 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@types/node": "^18.0.3",
     "husky": "^4.2.3",
     "prettier": "^2.0.3",
     "release-it": "^14.10.0",
@@ -45,8 +46,8 @@
     "@expo/config-plugins": "~4.1.4"
   },
   "peerDependencies": {
-    "react-native": ">= 0.68",
-    "indy-sdk-react-native": "^0.2.2"
+    "indy-sdk-react-native": "^0.2.2",
+    "react-native": ">= 0.68"
   },
   "publishConfig": {
     "access": "public",
