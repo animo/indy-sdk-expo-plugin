@@ -1,7 +1,7 @@
 {
   "name": "@animo/indy-sdk-expo-plugin",
   "description": "Config plugin to auto configure Indy SDK on prebuild",
-  "version": "0.1.6",
+  "version": "0.0.0",
   "main": "build/withIndySdk.js",
   "scripts": {
     "check-format": "prettier --check 'src/**/*.ts'",
