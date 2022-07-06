@@ -9,7 +9,7 @@ With the Indy SDK Expo Plugin you can generate the required ios and android file
 > Tested against Expo SDK 45
 
 ```
-yarn add @animo/indy-sdk-expo-plugin
+yarn add @animo-id/indy-sdk-expo-plugin
 ```
 
 ## Example
@@ -19,7 +19,7 @@ In your app.json `plugins` array:
 ```json
 {
   "expo": {
-    "plugins": ["@animo/indy-sdk-expo-plugin"]
+    "plugins": ["@animo-id/indy-sdk-expo-plugin"]
   }
 }
 ```
