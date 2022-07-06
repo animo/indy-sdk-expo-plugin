@@ -1,8 +1,17 @@
 {
-  "extends": "expo-module-scripts/tsconfig.plugin",
   "compilerOptions": {
+    "declaration": true,
     "outDir": "build",
-    "rootDir": "src"
+    "rootDir": "src",
+    "lib": ["es2018"],
+    "module": "commonjs",
+    "target": "es2018",
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node"
   },
   "include": ["./src"]
 }

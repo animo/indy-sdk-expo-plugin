@@ -31,7 +31,6 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "expo-module-scripts": "^2.0.0",
     "husky": "^4.2.3",
     "prettier": "^2.0.3",
     "release-it": "^14.10.0",
