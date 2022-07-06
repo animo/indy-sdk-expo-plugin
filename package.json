@@ -1,0 +1,73 @@
+{
+  "name": "@animo/indy-sdk-expo-plugin",
+  "description": "Config plugin to auto configure Indy SDK on prebuild",
+  "version": "0.1.6",
+  "main": "build/withIndySdk.js",
+  "scripts": {
+    "check-format": "prettier --check 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.ts'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublish": "yarn run build",
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/animo/expo-plugin-indy-sdk",
+    "baseUrl": "https://github.com/animo/expo-plugin-indy-sdk"
+  },
+  "keywords": [
+    "react-native",
+    "Hyperledger Indy",
+    "Hyperledger Aries",
+    "Indy SDK",
+    "expo",
+    "config-plugins",
+    "prebuild"
+  ],
+  "author": {
+    "name": "Animo Solutions",
+    "email": "contact@animo.id"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "expo-module-scripts": "^2.0.0",
+    "husky": "^4.2.3",
+    "prettier": "^2.0.3",
+    "release-it": "^14.10.0",
+    "typescript": "^4.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run check-format"
+    }
+  },
+  "dependencies": {
+    "@expo/config-plugins": "~4.1.4"
+  },
+  "peerDependencies": {
+    "react-native": ">= 0.68",
+    "indy-sdk-react-native": "^0.2.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "skipChecks": true,
+      "ignoreVersion": true,
+      "tag": "latest"
+    },
+    "git": {
+      "push": false,
+      "commit": false,
+      "requireCommits": true,
+      "tagAnnotation": "${version}",
+      "requireBranch": "main"
+    }
+  }
+}
