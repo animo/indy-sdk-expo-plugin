@@ -13,8 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/animo/expo-plugin-indy-sdk",
-    "baseUrl": "https://github.com/animo/expo-plugin-indy-sdk"
+    "url": "git+https://github.com/animo/indy-sdk-expo-plugin",
+    "baseUrl": "https://github.com/animo/indy-sdk-expo-plugin"
   },
   "keywords": [
     "react-native",
