@@ -76,7 +76,61 @@ Then add the plugin to your Expo app config (`app.json`, `app.config.json` or `a
 }
 ```
 
+And lastly, prebuild the application so the indy-sdk can be added as native dependency:
+
+```sh
+# yarn
+yarn prebuid
+
+# npm
+npm run prebuild
+```
+
 That's it, you now have Indy SDK configured for your iOS and Android project. If you're using this plugin with [Aries Framework JavaScript](https://github.com/hyperledger/aries-framework-javascript) you will still need to follow the other setup steps, but you can skip the [Installation](https://aries.js.org/guides/getting-started/installation/react-native) for React Native.
+
+
+## Test if everything works
+
+Add the `indy-sdk-react-native` to your project:
+
+```sh
+# yarn
+yarn add indy-sdk-react-native
+
+# npm
+npm install -s indy-sdk-react-native
+```
+
+Replace your `app.js` with the following:
+
+```javascript
+import { Button, StyleSheet, View } from "react-native";
+import Indy from "indy-sdk-react-native";
+
+export default function app() {
+  const testIndy = () => {
+    Indy.createWallet({ id: "sample-id" }, { key: "sample-key" })
+      .then(() => console.log("Success!"))
+      .catch((e) => console.error(`An error occurred! ${e}`));
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button onPress={testIndy} title="test indy" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+```
+
 
 ## Contributing
 
