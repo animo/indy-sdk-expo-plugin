@@ -76,7 +76,7 @@ Then add the plugin to your Expo app config (`app.json`, `app.config.json` or `a
 }
 ```
 
-And lastly, prebuild the application so the indy-sdk can be added as native dependency:
+And lastly, prebuild the application so the indy-sdk can be added as native dependency (If you aren't making any manual modification to the iOS and Android directories you can add them to the gitignore of your project and generate them on demand):
 
 ```sh
 # yarn
