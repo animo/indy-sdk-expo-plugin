@@ -76,18 +76,31 @@ Then add the plugin to your Expo app config (`app.json`, `app.config.json` or `a
 }
 ```
 
+Because the `Indy.framework` is built without bitcode enabled, we must disable bitcode for build created with EAS. We can do this by setting the `expo.ios.bitcode` property to `Debug` in the Expo config
+
+```json
+{
+  "expo": {
+    "ios": {
+      "bitcode": "Debug"
+    }
+  }
+}
+```
+
+> NOTE: the `expo` top level key is only needed in `app.json`. In `app.config.json`, `app.config.js` and `app.config.ts` the top level expo key is not present anymore.
+
 And lastly, prebuild the application so the indy-sdk can be added as native dependency (If you aren't making any manual modification to the iOS and Android directories you can add them to the gitignore of your project and generate them on demand):
 
 ```sh
 # yarn
-yarn prebuid
+yarn prebuild
 
 # npm
 npm run prebuild
 ```
 
 That's it, you now have Indy SDK configured for your iOS and Android project. If you're using this plugin with [Aries Framework JavaScript](https://github.com/hyperledger/aries-framework-javascript) you will still need to follow the other setup steps, but you can skip the [Installation](https://aries.js.org/guides/getting-started/installation/react-native) for React Native.
-
 
 ## Test if everything works
 
@@ -104,33 +117,32 @@ npm install -s indy-sdk-react-native
 Replace your `app.js` with the following:
 
 ```javascript
-import { Button, StyleSheet, View } from "react-native";
-import Indy from "indy-sdk-react-native";
+import { Button, StyleSheet, View } from 'react-native'
+import Indy from 'indy-sdk-react-native'
 
 export default function app() {
   const testIndy = () => {
-    Indy.createWallet({ id: "sample-id" }, { key: "sample-key" })
-      .then(() => console.log("Success!"))
-      .catch((e) => console.error(`An error occurred! ${e}`));
-  };
+    Indy.createWallet({ id: 'sample-id' }, { key: 'sample-key' })
+      .then(() => console.log('Success!'))
+      .catch((e) => console.error(`An error occurred! ${e}`))
+  }
 
   return (
     <View style={styles.container}>
       <Button onPress={testIndy} title="test indy" />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-});
+})
 ```
-
 
 ## Contributing
 
