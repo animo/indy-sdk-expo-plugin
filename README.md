@@ -76,13 +76,13 @@ Then add the plugin to your Expo app config (`app.json`, `app.config.json` or `a
 }
 ```
 
-Because the `Indy.framework` is built without bitcode enabled, we must disable bitcode for build created with EAS. We can do this by setting the `expo.ios.bitcode` property to `Debug` in the Expo config
+Because the `Indy.framework` is built without bitcode enabled, we must disable bitcode for the application. We can do this by setting the `expo.ios.bitcode` property to `false` in the Expo config
 
 ```json
 {
   "expo": {
     "ios": {
-      "bitcode": "Debug"
+      "bitcode": false
     }
   }
 }
