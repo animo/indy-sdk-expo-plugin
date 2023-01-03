@@ -52,7 +52,14 @@ An [Expo Config Plugin](https://docs.expo.dev/guides/config-plugins/) to automat
 
 With the Indy SDK Expo Plugin you can leverage the `expo prebuild` command to generate the `ios` and `android` directories. This removes the need to following the tedious instructions for setting up the Indy SDK for react native, and means you don't need to commit the `ios` and `android` directories.
 
-> Note: The Expo Indy SDK Plugin has currently only be tested against Expo SDK 45.
+## Version Support
+
+The Indy SDK Expo Plugin is developed against specific versions of Indy SDK React Native and Expo. While there is a chance of it working with other versions, currently the following versions are supported:
+
+| Indy SDK Expo Plugin | Indy SDK React Native | Expo SDK |
+| -------------------- | --------------------- | -------- |
+| 0.1.0                | 0.2.2                 | 45       |
+| 0.2.0                | ^0.3.0                | 47       |
 
 ## Getting Started
 
@@ -60,10 +67,10 @@ Install the plugin using the following command:
 
 ```sh
 # yarn
-yarn add @animo-id/indy-sdk-expo-plugin
+yarn add --dev @animo-id/indy-sdk-expo-plugin
 
 # npm
-npm install -s @animo-id/indy-sdk-expo-plugin
+npm install --save-dev @animo-id/indy-sdk-expo-plugin
 ```
 
 Then add the plugin to your Expo app config (`app.json`, `app.config.json` or `app.config.js`) `plugins` array:
