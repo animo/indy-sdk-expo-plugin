@@ -18,8 +18,6 @@ source 'https://cdn.cocoapods.org'`
 
 /**
  * @param src
- * @param useGoogleMaps
- * @param googleMapsPath '../node_modules/react-native-maps'
  * @returns
  */
 export function addIndyCocoaPods(src: string): MergeResults {
@@ -48,7 +46,7 @@ const withIosIndyPodSource: ConfigPlugin = (config) => {
       const contents = await fs.readFile(filePath, 'utf-8')
       let results: MergeResults
 
-      // Only add the block if react-native-maps is installed in the project (best effort).
+      // Only add the block if indy-sdk-react-native is installed in the project (best effort).
       // Generally prebuild runs after a yarn install so this should always work as expected.
       const indySdkReactNativePath = isIndySdkReactNativeInstalled(config.modRequest.projectRoot)
 
