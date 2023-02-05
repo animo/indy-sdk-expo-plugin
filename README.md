@@ -101,10 +101,10 @@ And lastly, prebuild the application so the indy-sdk can be added as native depe
 
 ```sh
 # yarn
-yarn prebuild
+yarn expo prebuild
 
 # npm
-npm run prebuild
+npx expo prebuild
 ```
 
 That's it, you now have Indy SDK configured for your iOS and Android project. If you're using this plugin with [Aries Framework JavaScript](https://github.com/hyperledger/aries-framework-javascript) you will still need to follow the other setup steps, but you can skip the [Installation](https://aries.js.org/guides/getting-started/installation/react-native) for React Native.
