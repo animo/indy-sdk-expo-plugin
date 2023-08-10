@@ -34,8 +34,8 @@
     "@types/node": "^18.0.3",
     "husky": "^4.2.3",
     "prettier": "^2.0.3",
-    "release-it": "^14.10.0",
-    "typescript": "^4.7.4"
+    "release-it": "^16.1.4",
+    "typescript": "~4.9.5"
   },
   "husky": {
     "hooks": {
@@ -43,11 +43,11 @@
     }
   },
   "dependencies": {
-    "@expo/config-plugins": "~4.1.4",
+    "@expo/config-plugins": "~6.0.0",
     "resolve-from": "^5.0.0"
   },
   "peerDependencies": {
-    "expo": "~47",
+    "expo": "~48",
     "indy-sdk-react-native": "^0.3.0",
     "react-native": ">= 0.70"
   },
