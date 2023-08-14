@@ -43,11 +43,11 @@
     }
   },
   "dependencies": {
-    "@expo/config-plugins": "~6.0.0",
+    "@expo/config-plugins": "~7.2.5",
     "resolve-from": "^5.0.0"
   },
   "peerDependencies": {
-    "expo": "~48",
+    "expo": "~49",
     "indy-sdk-react-native": "^0.3.0",
     "react-native": ">= 0.70"
   },

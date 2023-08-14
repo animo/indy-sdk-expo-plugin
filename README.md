@@ -61,6 +61,7 @@ The Indy SDK Expo Plugin is developed against specific versions of Indy SDK Reac
 | 0.1.0                | 0.2.2                 | 45       |
 | 0.2.0                | ^0.3.0                | 47       |
 | 0.3.0                | ^0.3.0                | 48       |
+| 0.3.0                | ^0.4.0                | 49       |
 
 ## Getting Started
 
